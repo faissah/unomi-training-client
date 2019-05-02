@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "id": "incrementAwesomeButtonNumberAction",
+    "name": "incrementAwesomeButtonNumberAction",
+    "description": "",
+    "tags": [
+      "event"
+    ],
+    "readOnly": true
+  },
+  "actionExecutor": "incrementAwesomeButtonNumber",
+  "parameters": []
+}
