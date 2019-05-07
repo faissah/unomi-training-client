@@ -29,8 +29,39 @@
 	<h1>Exercise 1</h1>
 
 	<p>
-		Create a file
+		Unomi profile properties are declared here:
+		<a href="https://github.com/apache/unomi/tree/unomi-root-1.3.0-incubating/services/src/main/resources/META-INF/cxs/properties/profiles">
+			https://github.com/apache/unomi/tree/unomi-root-1.3.0-incubating/services/src/main/resources/META-INF/cxs/properties/profiles
+		</a>
 	</p>
+
+	<p>
+		Deploy a new "basic" property "awesomeButtonNumberOfClick" which is an integer by building and deploy the Unomi plugin.
+	</p>
+	<p>
+		The AJAX response should contain the newly created property
+	</p>
+
+	<script type="text/javascript">
+		// ################################################
+		// ################################################
+		// Exercise 0: sending a simple ajax call to Unomi
+		// ################################################
+		// ################################################
+
+		var payload = {
+			source: {
+				"itemType":"page",
+				"scope":"unomiTraining",
+				"itemId":"1234"
+			}
+			,"requiredProfileProperties":["*"],
+			"requiredSessionProperties":["*"],
+			"requireSegments":true
+		};
+		contextRequest(function() {}, function() {}, payload);
+
+	</script>
 
 </body>
 

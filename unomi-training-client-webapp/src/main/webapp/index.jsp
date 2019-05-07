@@ -64,7 +64,7 @@
 					<p> Welcome to the Unomi Training</p>
 					<p><a href="/training/exercise0">Exercise 0: Trigger a first call to Unomi</a>
 					<p><a href="/training/exercise1">Exercise 1: Declare a profile property</a>
-					<p><a href="/training/exercise3">Exercise 2</a>
+					<p><a href="/training/exercise2">Exercise 2: Send an Event to Unomi</a>
 					<p><a href="/training/exercise3">Exercise 3</a>
 					<p><a href="/training/exercise4">Exercise 4</a>
 					</p>

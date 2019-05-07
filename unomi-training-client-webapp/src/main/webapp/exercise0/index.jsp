@@ -27,15 +27,18 @@
 
 	<h1>Exercise 0</h1>
 	<p>Exercise 0: sending a simple ajax call to Unomi</p>
-	<span>
-		var payload = {
-				source: {
-					"itemType":"page",
-					"scope":"unomiTraining",
-					"itemId":"1234"
-				}
-			};
-	</span>
+	<div>
+		<textarea id="payload" rows="8" cols="50">
+{
+	"source": {
+		"itemType":"page",
+		"scope":"unomiTraining",
+		"itemId":"1234"
+	}
+}
+		</textarea>
+	</div>
+	<button onclick="callUnomi()">Replay</button>
 
 
 	<script type="text/javascript">
@@ -45,15 +48,16 @@
 		// ################################################
 		// ################################################
 
-	var payload = {
-				source: {
-					"itemType":"page",
-					"scope":"unomiTraining",
-					"itemId":"1234"
-				}
-			};
-	contextRequest(function() {}, function() {}, payload);
+		function callUnomi(){
+			var payload = $("#payload")[0].value.replace(/\s+/g, '');
+			contextRequest(function () {
+			}, function () {
+			}, JSON.parse(payload));
+		}
 
+		$(document).ready(function() {
+			callUnomi();
+		});
 	</script>
 
 </body>

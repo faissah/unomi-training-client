@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "id": "awesomeButtonNumberOfClick",
+    "name": "Awesome button number of click",
+    "systemTags": [
+      "properties",
+      "profileProperties",
+      "basicProfileProperties"
+    ]
+  },
+  "type": "integer",
+  "defaultValue": "0",
+  "automaticMappingsFrom": [ ]
+}

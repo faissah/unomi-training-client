@@ -27,23 +27,24 @@
 		// Exercise 1: Send an event to Unomi when the awesome button is clicked
 		// ######################################################################
 		// ######################################################################
-		$( "#awesome-button" ).click(function() {
-			var payload = {
-				source: {
-					"itemType":"page",
-					"scope":"${renderContext.site.siteKey}",
-					"itemId":"${renderContext.mainResource.node.identifier}"
-				},
-				"events":[
-					{
-						"eventType": "clickedAwesomeButton",
-						"scope": "digitall",
-						"timeStamp": "${timestampNow}"
-					}],
-				"requiredProfileProperties":["awesomeButtonClickNb"]
-			};
-			console.log( "Click on the awesome button detected. What should we do next?" );
-			contextRequest(function() {}, function() {}, payload);
+		$(document).ready(function(){
+			$( "#awesome-button" ).click(function() {
+				var payload = {
+					source: {
+						"itemType":"page",
+						"scope":"${renderContext.site.siteKey}",
+						"itemId":"${renderContext.mainResource.node.identifier}"
+					},"events":[
+						{
+							"eventType": "sessionCreated",
+							"scope": "digitall",
+						}],
+					"requiredProfileProperties":["*"]
+
+				};
+				console.log( "Click on the awesome button detected. What should we do next?" );
+				contextRequest(function() {}, function() {}, payload);
+			});
 		});
 	</script>
 
