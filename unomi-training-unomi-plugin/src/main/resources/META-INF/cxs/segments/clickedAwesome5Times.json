@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "id": "clickedAwesome5Times",
+    "name": "Clicked on Awesome Button 5 times",
+    "scope": "systemscope",
+    "description": "You can customize the list below by editing the segment.",
+    "readOnly":true,
+    "enabled": true
+  },
+  "condition": {
+    "parameterValues": {
+      "subConditions": [
+        {
+          "parameterValues": {
+            "propertyName": "properties.awesomeButtonNumberOfClick",
+            "propertyValueInteger": "5",
+            "comparisonOperator": "greaterThan"
+          },
+          "type": "profilePropertyCondition"
+        }
+      ],
+      "operator" : "and"
+    },
+    "type": "booleanCondition"
+  }
+}

@@ -18,42 +18,13 @@
     -->
 <head>
 	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-		  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script type="text/javascript" src="./javascript/jquery-3.4.0.js"></script>
-	<script type="text/javascript" src="./javascript/contextRequest.js"></script>
-
+	<jsp:include page="head.jspf"></jsp:include>
 	<title>Unomi Training</title></head>
 <head>
 
 </head>
 <body>
-<header>
-	<nav class="navbar navbar-expand-md navbar-light bg-white fixed-top border-bottom box-shadow">
-		<div class="container">
-			<a class="navbar-brand" href="index.html">
-				<img src="images/unomi-86x20.png" alt="Logo Apache Unomi"/>
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-				<div>
-					<ul class="navbar-nav mr-auto align-items-center text-uppercase">
-						<li class="nav-item">
-							<a class="nav-link disabled" target="_blank" href="https://www.apache.org">
-								<img src="images/apache-feather-tm-new.png" alt="Logo Apache Feather"/>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</nav>
-
-</header>
+<jsp:include page="header.jspf"></jsp:include>
 <main>
 	<div class="container-fluid product pt-5 pb-5 mx-auto">
 		<div class="row pt-5 pb-5">

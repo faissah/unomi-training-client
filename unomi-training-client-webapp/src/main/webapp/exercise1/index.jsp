@@ -17,52 +17,49 @@
         limitations under the License.
     -->
 <head>
-	<script type="text/javascript" src="./javascript/jquery-3.4.0.js"></script>
-	<script type="text/javascript" src="./javascript/contextRequest.js"></script>
-
-
-
-
+	<jsp:include page="../head.jspf"></jsp:include>
 	<title>Exercise 1</title>
 </head>
 <body>
-	<h1>Exercise 1</h1>
+<jsp:include page="../header.jspf"></jsp:include>
+<div class="container-fluid product pt-5 pb-5 mx-auto">
+	<div class="row pt-5 pb-5">
+		<div class="container">
+			<div class="col pt-5 mx-auto text-left">
+				<h1>Exercise 1</h1>
 
-	<p>
-		Unomi profile properties are declared here:
-		<a href="https://github.com/apache/unomi/tree/unomi-root-1.3.0-incubating/services/src/main/resources/META-INF/cxs/properties/profiles">
-			https://github.com/apache/unomi/tree/unomi-root-1.3.0-incubating/services/src/main/resources/META-INF/cxs/properties/profiles
-		</a>
-	</p>
+				<p>
+					Unomi profile properties are declared here:
+					<a href="https://github.com/apache/unomi/tree/unomi-root-1.3.0-incubating/services/src/main/resources/META-INF/cxs/properties/profiles">
+						https://github.com/apache/unomi/tree/unomi-root-1.3.0-incubating/services/src/main/resources/META-INF/cxs/properties/profiles
+					</a>
+				</p>
 
-	<p>
-		Deploy a new "basic" property "awesomeButtonNumberOfClick" which is an integer by building and deploy the Unomi plugin.
-	</p>
-	<p>
-		The AJAX response should contain the newly created property
-	</p>
+				<p>
+					You can view all those properties under
+					<a href="http://localhost:8182/cxs/profiles/properties">
+						http://localhost:8182/cxs/profiles/properties
+					</a>
+				</p>
+				<p>
+					Individual properties are accessible under (ie. Frist Name)
+					<a href="http://localhost:8182/cxs/profiles/properties/firstName">
+						http://localhost:8182/cxs/profiles/properties/firstName
+					</a>
+				</p>
+				<p>
+					Deploy a new "basic" property "awesomeButtonNumberOfClick" which is an integer by building and deploy the Unomi plugin, it should then be accessible under:
+					http://localhost:8182/cxs/profiles/properties/awesomeButtonNumberOfClick
+					<a href="http://localhost:8182/cxs/profiles/properties/awesomeButtonNumberOfClick">
+						http://localhost:8182/cxs/profiles/properties/awesomeButtonNumberOfClick
+					</a>
+				</p>
 
-	<script type="text/javascript">
-		// ################################################
-		// ################################################
-		// Exercise 0: sending a simple ajax call to Unomi
-		// ################################################
-		// ################################################
-
-		var payload = {
-			source: {
-				"itemType":"page",
-				"scope":"unomiTraining",
-				"itemId":"1234"
-			}
-			,"requiredProfileProperties":["*"],
-			"requiredSessionProperties":["*"],
-			"requireSegments":true
-		};
-		contextRequest(function() {}, function() {}, payload);
-
-	</script>
-
+				</div>
+			</div>
+		</div>
+	</div>
+	</main>
 </body>
 
 

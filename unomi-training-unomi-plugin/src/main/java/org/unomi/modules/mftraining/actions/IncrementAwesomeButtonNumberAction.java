@@ -30,7 +30,7 @@ import java.util.Collections;
  * Increments the number of times the user associated with the profile tweeted.
  */
 public class IncrementAwesomeButtonNumberAction implements ActionExecutor {
-    private static final String AWESOMEBUTTON_NB_PROPERTY = "awesomeButtonClickNb";
+    private static final String AWESOMEBUTTON_NB_PROPERTY = "awesomeButtonNumberOfClick";
     private static final Logger logger = LoggerFactory.getLogger(IncrementAwesomeButtonNumberAction.class.getName());
     private static final String TARGET = "profiles";
 
@@ -46,11 +46,11 @@ public class IncrementAwesomeButtonNumberAction implements ActionExecutor {
         // TODO: remove this block and create the property from a JSON file.
         if (clickNb == null ) {
             // create tweet number property type
-            PropertyType propertyType = new PropertyType(new Metadata(event.getScope(), AWESOMEBUTTON_NB_PROPERTY, AWESOMEBUTTON_NB_PROPERTY, "Awesome Button Click Number"));
+       /*     PropertyType propertyType = new PropertyType(new Metadata(event.getScope(), AWESOMEBUTTON_NB_PROPERTY, AWESOMEBUTTON_NB_PROPERTY, "Awesome Button Click Number"));
             propertyType.setValueTypeId("integer");
             //propertyType.setTagIds(Collections.singleton("basicProfileProperties"));
             propertyType.setTarget("profiles");
-            service.setPropertyType(propertyType);
+            service.setPropertyType(propertyType);*/
             clickNb = 0;
         }
 
