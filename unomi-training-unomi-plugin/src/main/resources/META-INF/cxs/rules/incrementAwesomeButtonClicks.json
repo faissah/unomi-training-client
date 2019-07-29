@@ -13,8 +13,12 @@
   },
   "actions": [
     {
-      "type": "incrementAwesomeButtonNumberAction",
-      "parameterValues": {}
+      "parameterValues": {
+        "setPropertyName": "properties.awesomeButtonNumberOfClick",
+        "setPropertyValue": "script::r = profile.properties['awesomeButtonNumberOfClick']; if (r == null) { profile.properties['awesomeButtonNumberOfClick'] = 0} else { if (r != null) { r = r + 1 }} r",
+        "storeInSession": false
+      },
+      "type": "setPropertyAction"
     }
   ]
 }

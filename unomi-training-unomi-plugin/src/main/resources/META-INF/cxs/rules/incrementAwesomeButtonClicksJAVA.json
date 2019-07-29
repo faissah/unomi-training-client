@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "id": "smp:incrementAwesomeButtonClicksJAVA",
+    "name": "Increment Awesome Button counter",
+    "description": "Increment the number of clicks on the awesome button"
+  },
+  "raiseEventOnlyOnceForSession": false,
+  "condition": {
+    "type": "eventTypeCondition",
+    "parameterValues": {
+      "eventTypeId": "clickedAwesomeButtonJAVA"
+    }
+  },
+  "actions": [
+    {
+      "type": "incrementAwesomeButtonNumberAction",
+      "parameterValues": {}
+    }
+  ]
+}

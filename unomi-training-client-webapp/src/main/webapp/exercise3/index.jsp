@@ -17,48 +17,68 @@
         limitations under the License.
     -->
 <head>
-	<script type="text/javascript" src="./javascript/jquery-3.4.0.js"></script>
-	<script type="text/javascript" src="./javascript/contextRequest.js"></script>
+	<jsp:include page="../head.jspf"></jsp:include>
 
-
-	<script type="text/javascript">
-		// ######################################################################
-		// ######################################################################
-		// Exercise 1: Send an event to Unomi when the awesome button is clicked
-		// ######################################################################
-		// ######################################################################
-		$( "#awesome-button" ).click(function() {
-			var payload = {
-				source: {
-					"itemType":"page",
-					"scope":"${renderContext.site.siteKey}",
-					"itemId":"${renderContext.mainResource.node.identifier}"
-				},
-				"events":[
-					{
-						"eventType": "clickedAwesomeButton",
-						"scope": "digitall",
-						"timeStamp": "${timestampNow}"
-					}],
-				"requiredProfileProperties":["awesomeButtonClickNb"]
-			};
-			console.log( "Click on the awesome button detected. What should we do next?" );
-			contextRequest(function() {}, function() {}, payload);
-		});
-	</script>
-
-
-	<title>Exercise 1</title>
+	<title>Exercise 3</title>
 </head>
 <body>
-	<h1>Exercise 1</h1>
+	<jsp:include page="../header.jspf"></jsp:include>
+	<main>
+		<div class="container-fluid product pt-5 pb-5 mx-auto">
+			<div class="row pt-5 pb-5">
+				<div class="container">
+					<div class="col pt-5 mx-auto text-left">
 
-	<div class="awesome-button-container">
-		<h2 class="awesome-event-button-label">This is the awesome Event Button!</h2>
-		<p class="awesome-event-button-label">Click it to send events to Unomi.</p>
-		<button id="awesome-button">Awesome Button</button>
-	</div>
+						<h1>Exercise 3</h1>
 
+
+						<textarea id="payload" rows="14" cols="50">
+{
+	"source": {
+		"itemType":"page",
+		"scope":"unomiTraining",
+		"itemId":"1234"
+	},"events":[
+		{
+			"eventType": "clickedAwesomeButton",
+			"scope": "digitall"
+		}],
+	"requiredProfileProperties":["*"],
+	"requireSegments": true
+}
+						</textarea>
+
+
+						</div>
+					<h2 class="awesome-event-button-label">This is the awesome Event Button!</h2>
+					<p class="awesome-event-button-label">Click it to send events to Unomi.</p>
+						<button onclick="callUnomi()">Awesome Button</button>
+
+
+					<h3>Unomi Response</h3>
+						<div class="response awesome-button-container">
+							<pre id="unomiResponse"></pre>
+						</div>
+
+
+						<script type="text/javascript">
+							function callUnomi(){
+								var payload = $("#payload")[0].value.replace(/\s+/g, '');
+								contextRequest(displayResponse, displayError, JSON.parse(payload));
+							}
+							function displayResponse(response){
+								$("#unomiResponse").text(JSON.stringify(response, undefined, 2));
+							}
+							function displayError(response){
+								$("#unomiResponse").text("Error");
+							};
+						</script>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 </body>
 
 

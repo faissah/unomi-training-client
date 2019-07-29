@@ -29,7 +29,7 @@
 				<div class="container">
 					<div class="col pt-5 mx-auto text-left">
 
-						<h1>Exercise 1</h1>
+						<h1>Exercise 2</h1>
 
 
 						<textarea id="payload" rows="14" cols="50">
@@ -43,7 +43,8 @@
 			"eventType": "clickedAwesomeButton",
 			"scope": "digitall"
 		}],
-	"requiredProfileProperties":["*"]
+	"requiredProfileProperties":["*"],
+	"requireSegments": true
 }
 						</textarea>
 

@@ -13,7 +13,7 @@
         {
           "parameterValues": {
             "propertyName": "properties.awesomeButtonNumberOfClick",
-            "propertyValueInteger": "5",
+            "propertyValueInteger": 5,
             "comparisonOperator": "greaterThan"
           },
           "type": "profilePropertyCondition"
